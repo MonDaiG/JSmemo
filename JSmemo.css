@@ -1,0 +1,121 @@
+
+body{
+    background-color: #046;
+    margin: 0;
+    padding: 30px;
+    font-size: 16px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+h1{
+    font-size: 3rem;
+    color: crimson;
+    
+    /* text-shadow: white 0px 0px 2px; */
+}
+nav{
+    width: 90vw;
+    margin: 0;
+    border-radius: 20px;
+    padding: 15px;
+    background: #068;
+}
+nav ul{
+    font-size: 2rem;
+}
+nav ul li a{
+    text-decoration: none;
+    color: salmon;
+}
+
+.noneul{
+    list-style: none;
+}
+.salmon{
+    color: salmon;
+}
+.tomato{
+    color: tomato;
+}
+
+main{
+    margin: 0;
+    padding: 0;
+}
+
+.point{
+    width: 90vw;
+    margin: 0;
+    background: #468;
+    border-radius: 20px;
+    padding:0 15px;
+    color: salmon;
+}
+
+.point h2{
+    font-size: 2.5rem;
+    color: tomato;
+    cursor: pointer;
+}
+.point p{
+    padding-left: 20px;
+    font-size: 2rem;
+    color: salmon;
+    display: none;
+}
+.point.appear p{
+    display: block;
+}
+.point dl{
+    margin: 0;
+    padding: 0;
+    display: none;
+}
+.point.appear dl{
+    animation:.3s fadeIn;
+    display: block;
+}
+.point dl dt{
+    padding-left: 20px;
+    font-size: 2rem;
+}
+.point dl dd{
+    padding:10px 20px 30px;
+    font-size: 1.75rem;
+}
+.point dl dd input{
+    font-size: 1em;
+}
+
+.icon-setting{
+    font-size: 1em;
+    vertical-align:text-bottom;
+}
+
+
+
+.image-btn{
+    width: 50px;
+    height: 30px;
+    vertical-align: text-bottom;
+    border-radius: 10px;
+}
+
+#url:valid{
+    color: blue;
+}
+#url:invalid{
+    color: red;
+}
+
+@keyframes fadeIn{
+    0%{
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: none;
+    }
+}

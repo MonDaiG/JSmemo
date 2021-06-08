@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charaset="utf-8">
+        <title>JSmemo</title>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+        <link rel="stylesheet" href="JSmemo.css"> 
+    </head>
+    <body>
+        <!-- main code -->
+        <header>
+            <h1>JavaScriptの文法、ポイントメモ</h1>
+            <nav>
+                <ul class="salmon">
+                    <li><a href="#input-type">inputのtype</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section class="point" id="input-type">
+                <!-- マテリアルアイコンの導入はheadの1つ目のstylesheetのlinkと
+                    <span class="material-icons">アイコン名</span> が必要。
+                    アイコン名はhttps://fonts.google.com/iconsから好きなのを選んで、
+                    その名前をすべて小文字で入れるだけ-->
+                <h2>
+                    <span class="material-icons icon-setting">toc</span>
+                    inputのtype
+                </h2>
+                <p>
+                    inputタグのtype属性には以下のような種類があります。
+                </p>
+                <dl>
+                        <dt>&lt;input type="button"&gt;</dt>
+                        <dd><input type="button" value="Click me!" title="押すなよ！　絶対押すなよ！" style="cursor: pointer;"> クリック可能なボタン</dd>
+                        <dt>&lt;input type="checkbox"&gt;</dt>
+                        <dd><input type="checkbox"> チェックのオンオフを切り替えられるボタン</dd>
+                        <dt>&lt;input type="color"&gt;</dt>
+                        <dd><input type="color"> 色を選択させるウィンドウを起動する</dd>
+                        <dt>&lt;input type="date"&gt;</dt>
+                        <dd><input type="date"><br>
+                            年月日を選択するためのフォーム</dd>
+                        <dt>&lt;input type="datetime-local"&gt;</dt>
+                        <dd><input type="datetime-local"><br>
+                            年月日に加え、時間も選択させるフォーム</dd>
+                        
+                        <dt>&lt;input type="datetime"&gt;</dt>
+                        <dd><input type="datetime"><br>
+                            日付と時刻に加えてタイムゾーンを入力する<br>
+                            ただし、もうそろそろなくなる仕様</dd>
+                        <dt>&lt;input type="email"&gt;</dt>
+                        <dd><input type="email"><br>
+                            メールアドレスを入力させるためのフォーム</dd>
+                        <dt>&lt;input type="file"&gt;</dt>
+                        <dd><input type="file"><br>
+                            ファイル選択のウィンドウを起動する</dd>
+                        <dt>&lt;input type="hidden"&gt;</dt>
+                        <dd><input type="hidden" style="cursor: pointer;">何も表示しないフォーム。隠しフォーム？</dd>
+                        <dt>&lt;input type="image"&gt;</dt>
+                        <dd><input type="image" src="colorful_tiles.jpg" class="image-btn" title="'送信'は画像に書いてね"> 画像を使った送信ボタン</dd>
+                        <dt>&lt;input type="month"&gt;</dt>
+                        <dd><input type="month"><br>
+                            年と月まで指定するフォーム</dd>
+                        <dt>&lt;input type="number"&gt;</dt>
+                        <dd><input type="number"><br>
+                            整数値の入力させるためのフォーム。上下の矢印で選択することもできる。</dd>
+                        <dt>&lt;input type="password"&gt;</dt>
+                        <dd><input type="password"><br>
+                            パスワード入力用のフォーム。入力した文字が表示されない</dd>
+                        <dt>&lt;input type="radio"&gt;</dt>
+                        <dd><input type="radio" name="spam" checked> spam?
+                            <input type="radio" name="spam"> spam.
+                            <input type="radio" name="spam"> spam!<br>
+                            ラジオボタンは複数並べてこそチェックボックスとの違いがわかる。<br>
+                            ラジオボタンのグループ化する(複数選択を不可にする)ためにはname属性を揃える必要があります。</dd>
+                        <dt>&lt;input type="range"&gt;</dt>
+                        <dd><input type="range" max="100" style="width: 200px;"> 0~100<br>
+                            <input type="range" max="5" style="width: 200px;"> 0~5<br>
+                            スライダー。min,max属性で最小値、最大値を設定し、stepで刻み幅を設定する<br>
+                            スライダー自体の幅はcssのwidthプロパティで設定できる</dd>
+                        <dt>&lt;input type="reset"&gt;</dt>
+                        <dd><input type="reset" value="Reset"><br>
+                            リセットボタン。クリックすると入力フォームの値をリセットするらしいが？</dd>
+                        <dt>&lt;input type="search"&gt;</dt>
+                        <dd><input type="search"><br>
+                            検索用窓。textフォームと機能的には同じらしい</dd>
+                        <dt>&lt;input type="submit"&gt;</dt>
+                        <dd><input type="submit" value="Submit"><br>
+                            送信ボタン。フォームに入力された内容をサーバに送信しようとするよ！</dd>
+                        <dt>&lt;input type="tel"&gt;</dt>
+                        <dd><input type="tel"><br>
+                            電話番号入力用フォーム。<br>
+                            スマホで入力しようとすると、数字入力用のキーパッドを起動する点がtextフォームと違うよ！</dd>
+                        <dt>&lt;input type="text"&gt;</dt>
+                        <dd><input type="text" maxlength="8" size="10"><br>
+                            シンプルなテキスト入力用フォーム。<br>
+                            value属性で初期値、minlength,maxlengthで最小文字数、最大文字数を設定できるよ！<br>
+                            size属性は入力フォームの長さを設定できるよ！maxlengthより少し長めがオススメ！</dd>
+                        <dt>&lt;input type="time"&gt;</dt>
+                        <dd><input type="time"><br>
+                            時間入力用フォーム。</dd>
+                        <dt>&lt;input type="url"&gt;</dt>
+                        <dd><input type="url" id="url"><br>
+                            URL入力用フォーム。送信前に有効な値かどうかチェックするよ！<br>
+                            :validプロパティで有効時の書式、:invalidプロパティで無効時の書式を設定できるよ！</dd>
+
+                        <dt>&lt;input type="week"&gt;</dt>
+                        <dd><input type="week"><br>
+                            年と週を設定するフォーム。使える……のか……？</dd>
+                </dl>
+                
+            </section>
+        </main>
+        <!-- <script>
+            'use strict'
+            console.log("Spam!")
+        </script> -->
+        <script src="JSmemo.js"></script>
+    </body>
+</html>
