@@ -14,6 +14,7 @@
             <nav>
                 <ul class="salmon">
                     <li><a href="#input-type">inputのtype</a></li>
+                    <li><a href="#click-function">ボタンクリック時の関数定義と対応付け</a></li>
                 </ul>
             </nav>
         </header>
@@ -27,10 +28,10 @@
                     <span class="material-icons icon-setting">toc</span>
                     inputのtype
                 </h2>
-                <p>
+                <p class="fadein-anim">
                     inputタグのtype属性には以下のような種類があります。
                 </p>
-                <dl>
+                <dl class="fadein-anim">
                         <dt>&lt;input type="button"&gt;</dt>
                         <dd><input type="button" value="Click me!" title="押すなよ！　絶対押すなよ！" style="cursor: pointer;"> クリック可能なボタン</dd>
                         <dt>&lt;input type="checkbox"&gt;</dt>
@@ -107,8 +108,81 @@
                         <dt>&lt;input type="week"&gt;</dt>
                         <dd><input type="week"><br>
                             年と週を設定するフォーム。使える……のか……？</dd>
-                </dl>
-                
+                </dl>   
+            </section>
+            <section class="point" id="click-function">
+                <h2>
+                    <span class="material-icons icon-setting">mode</span>
+                    ボタンクリック時の関数定義と対応付け
+                </h2>
+                <p class="fadein-anim">
+                    inputタグのbuttonがクリックされたときの関数の定義と対応付けの方法にはいくつかありますが、使える方法と使えない方法をまとめます。
+                </p>
+                <div class="code-section fadein-anim">
+                    <h3>正しく起動するパターン１</h3>
+                    <div class="codearea">
+                        <h4>HTML</h4>
+                        <p>&lt;input type="button" id="btn" value="button"&gt;</p>
+                    </div>
+                    <div class="codearea">
+                        <h4>JavaScript</h4>
+                        <p>const btn=document.getElementById("btn")<br>
+                            btn.addEventListener('click',()=>{<br>
+                                //関数内の処理<br>
+                            })
+                        </p>
+                    </div>
+
+                </div>
+                <div class="code-section fadein-anim">
+                    <h3>正しく起動するパターン２</h3>
+                    <div class="codearea">
+                        <h4>HTML</h4>
+                        <p>&lt;input type="button" id="btn" value="button"&gt;</p>
+                    </div>
+                    <div class="codearea">
+                        <h4>JavaScript</h4>
+                        <p>
+                            const btn=document.getElementById("btn")<br>
+                            btn.onclick=()=>{<br>
+                                //関数内の処理<br>
+                            })
+                        </p>
+                    </div>
+                    <div class="code-section fadein-anim">
+                        <h3>正しく起動しないパターン１</h3>
+                        <div class="codearea">
+                            <h4>HTML</h4>
+                            <p>&lt;input type="button" id="btn" value="button" onclick="btnClick()"&gt;</p>
+                        </div>
+                        <div class="codearea">
+                            <h4>JavaScript</h4>
+                            <p>
+                                function btnclick(){<br>
+                                    //関数内の処理<br>
+                                })
+                            </p>
+                        </div>
+    
+                    </div>
+                </div>
+                <div class="code-section fadein-anim">
+                    <h3>正しく起動しないパターン２</h3>
+                    <div class="codearea">
+                        <h4>HTML</h4>
+                        <p>&lt;input type="button" id="btn" value="button" onclick="btnClick()"&gt;</p>
+                    </div>
+                    <div class="codearea">
+                        <h4>JavaScript</h4>
+                        <p>
+                            const btnclick=()=>{<br>
+                                //関数内の処理<br>
+                            })
+                        </p>
+                    </div>
+
+                </div>
+            </div>
             </section>
         </main>
         <!-- <script>

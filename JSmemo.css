@@ -28,6 +28,7 @@ nav ul li a{
     color: salmon;
 }
 
+
 .noneul{
     list-style: none;
 }
@@ -57,13 +58,13 @@ main{
     color: tomato;
     cursor: pointer;
 }
-.point p{
+.point>p{
     padding-left: 20px;
     font-size: 2rem;
     color: salmon;
     display: none;
 }
-.point.appear p{
+.point.appear>p{
     display: block;
 }
 .point dl{
@@ -72,7 +73,6 @@ main{
     display: none;
 }
 .point.appear dl{
-    animation:.3s fadeIn;
     display: block;
 }
 .point dl dt{
@@ -90,6 +90,7 @@ main{
 .icon-setting{
     font-size: 1em;
     vertical-align:text-bottom;
+    color:limegreen;
 }
 
 
@@ -118,4 +119,35 @@ main{
         opacity: 1;
         transform: none;
     }
+}
+.fadein-anim{
+    animation:.3s fadeIn;
+}
+
+.code-section{
+    padding: 0 0 10px;
+    display: none;
+}
+.point.appear .code-section{
+    display: block;
+}
+.code-section h3{
+    margin: 0 0 0 20px;
+    font-size: 1.75rem;
+    font-weight: bold;
+}
+.codearea{
+    background: #9bd;
+    padding: 10px;
+    font-size: 1.25rem;
+    color: darkblue;
+    margin: 0 20px 15px;
+}
+.codearea h4{
+    margin: 0 0 10px;
+}
+.codearea p{
+    margin-left: 15px;
+    font-family:monospace;
+    line-height: 1.5rem;
 }
