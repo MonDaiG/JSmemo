@@ -149,22 +149,36 @@
                             }
                         </p>
                     </div>
-                    <div class="code-section fadein-anim">
-                        <h3>正しく起動しないパターン１</h3>
-                        <div class="codearea">
-                            <h4>HTML</h4>
-                            <p>&lt;input type="button" id="btn" value="button" onclick="btnClick()"&gt;</p>
-                        </div>
-                        <div class="codearea">
-                            <h4>JavaScript</h4>
-                            <p>
-                                function btnClick(){<br>
-                                    //関数内の処理<br>
-                                }
-                            </p>
-                        </div>
-    
+                </div>
+                <div class="code-section fadein-anim">
+                    <h3>正しく起動するパターン３</h3>
+                    <div class="codearea">
+                        <h4>HTML</h4>
+                        <p>
+                            &lt;input type="button" id="btn" value="button" onclick="btnClick()&gt;<br>
+                            &lt;script&gt;<br>
+                            function btnClick(){<br>
+                                &lt;!-- 関数内の処理 --&gt;<br>
+                            }<br>
+                            &lt;/script&gt;
+                        </p>
                     </div>
+                </div>
+                <div class="code-section fadein-anim">
+                    <h3>正しく起動しないパターン１</h3>
+                    <div class="codearea">
+                        <h4>HTML</h4>
+                        <p>&lt;input type="button" id="btn" value="button" onclick="btnClick()"&gt;</p>
+                    </div>
+                    <div class="codearea">
+                        <h4>JavaScript</h4>
+                        <p>
+                            function btnClick(){<br>
+                                //関数内の処理<br>
+                            }
+                        </p>
+                    </div>
+
                 </div>
                 <div class="code-section fadein-anim">
                     <h3>正しく起動しないパターン２</h3>
