@@ -15,6 +15,7 @@
                 <ul class="salmon">
                     <li><a href="#input-type">inputのtype</a></li>
                     <li><a href="#click-function">ボタンクリック時の関数定義と対応付け</a></li>
+                    <li><a href="#event-list">JavaScriptのイベント</a></li>
                 </ul>
             </nav>
         </header>
@@ -196,13 +197,36 @@
                     </div>
 
                 </div>
+                <p class="fadein-anim">
+                    結論：タグのイベント属性に関数を指定する場合(正しく起動するパターン３)は、HTML内のscriptタグ内にその関数を記述する必要がある。<br>
+                    JavaScriptを別のファイルに分ける場合は、そっちのファイル内でオブジェクトを取得し、そのイベント属性に関数を設定する(正しく起動するパターン２)か、
+                    <span class="scode">addEventListenerでイベントと関数を結びつける必要がある。</span>
+                </p>
             </div>
             </section>
+            <section class="point" id="event-list">
+                <h2>
+                    <span class="material-icons icon-setting">report_problem</span>
+                    JavaScriptのイベント(編集中)
+                </h2>
+                <p class="fadein-anim">
+                    JavaScriptの主なイベント名と発生タイミングのリスト(<a class="tomato" href="https://developer.mozilla.org/ja/docs/Web/Events">MDNの参照リンク</a>)<br>    
+                    実行は是非<br>
+                    <span class="scode">element.イベント名=()=>{//関数の処理}</span><br>
+                    または<br>
+                    <span class="scode">element.addEventLister('イベント名',()=>{//関数の処理})</span><br>
+                    で。
+                </p>
+                <dl class="eventlist fadein-anim">
+                    <dt>load</dt>
+                    <dd>リソースの読み込みの成功時に起動。<br>
+                        <span class="scode">window.load</span>に関数を設定することで、ページの読み込みが終了した時点での初期化処理を設定しておける。</dd>
+                    <dt>unload</dt>
+                    <dd>ページを離れるときに起動。<br>
+                        長いテキストなどを入力させるページから離れるときに、<span class="scode">alert("このページから離れますか？")</span>なんかができる。</dd>
+                </dl>
+            </section>
         </main>
-        <!-- <script>
-            'use strict'
-            console.log("Spam!")
-        </script> -->
         <script src="JSmemo.js"></script>
     </body>
 </html>
